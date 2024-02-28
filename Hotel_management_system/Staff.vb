@@ -1,4 +1,4 @@
-﻿Public Class Login
+﻿Public Class Staff
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
