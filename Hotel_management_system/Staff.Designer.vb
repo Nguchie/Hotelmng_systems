@@ -25,20 +25,20 @@ Partial Class Staff
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Staff))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_reset = New System.Windows.Forms.Button()
+        Me.btn_delete = New System.Windows.Forms.Button()
+        Me.btn_edit = New System.Windows.Forms.Button()
+        Me.btn_add = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_search = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.staff_phone = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Combo_gender = New System.Windows.Forms.ComboBox()
+        Me.txt_password = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_staffname = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -46,6 +46,11 @@ Partial Class Staff
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,137 +61,145 @@ Partial Class Staff
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btn_reset)
+        Me.Panel1.Controls.Add(Me.btn_delete)
+        Me.Panel1.Controls.Add(Me.btn_edit)
+        Me.Panel1.Controls.Add(Me.btn_add)
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.txt_search)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.staff_phone)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Combo_gender)
+        Me.Panel1.Controls.Add(Me.txt_password)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txt_staffname)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(168, 0)
+        Me.Panel1.Location = New System.Drawing.Point(141, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(936, 633)
+        Me.Panel1.Size = New System.Drawing.Size(779, 533)
         Me.Panel1.TabIndex = 1
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 335)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 283)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 62
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(928, 295)
+        Me.DataGridView1.Size = New System.Drawing.Size(715, 262)
         Me.DataGridView1.TabIndex = 24
         '
-        'Button4
+        'btn_reset
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button4.Location = New System.Drawing.Point(647, 217)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(115, 36)
-        Me.Button4.TabIndex = 23
-        Me.Button4.Text = "Reset"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn_reset.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_reset.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_reset.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_reset.Location = New System.Drawing.Point(445, 201)
+        Me.btn_reset.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_reset.Name = "btn_reset"
+        Me.btn_reset.Size = New System.Drawing.Size(77, 52)
+        Me.btn_reset.TabIndex = 23
+        Me.btn_reset.Text = "Reset"
+        Me.btn_reset.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn_delete
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button3.Location = New System.Drawing.Point(520, 216)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 36)
-        Me.Button3.TabIndex = 22
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_delete.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_delete.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_delete.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_delete.Location = New System.Drawing.Point(361, 200)
+        Me.btn_delete.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(81, 52)
+        Me.btn_delete.TabIndex = 22
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_edit
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button2.Location = New System.Drawing.Point(381, 216)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 36)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_edit.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_edit.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_edit.Location = New System.Drawing.Point(268, 200)
+        Me.btn_edit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(85, 52)
+        Me.btn_edit.TabIndex = 21
+        Me.btn_edit.Text = "Edit"
+        Me.btn_edit.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btn_add
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button1.Location = New System.Drawing.Point(244, 216)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 36)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_add.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_add.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_add.Location = New System.Drawing.Point(177, 200)
+        Me.btn_add.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Size = New System.Drawing.Size(80, 52)
+        Me.btn_add.TabIndex = 20
+        Me.btn_add.Text = "Add"
+        Me.btn_add.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(868, 294)
+        Me.PictureBox2.Location = New System.Drawing.Point(706, 203)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 35)
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 23)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 19
         Me.PictureBox2.TabStop = False
         '
-        'TextBox4
+        'txt_search
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(711, 294)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 35)
-        Me.TextBox4.TabIndex = 18
+        Me.txt_search.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_search.Location = New System.Drawing.Point(568, 200)
+        Me.txt_search.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.Size = New System.Drawing.Size(108, 26)
+        Me.txt_search.TabIndex = 18
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label7.Location = New System.Drawing.Point(372, 297)
+        Me.Label7.Location = New System.Drawing.Point(273, 263)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(160, 32)
+        Me.Label7.Size = New System.Drawing.Size(107, 22)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Agents list"
         '
-        'TextBox3
+        'staff_phone
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(244, 174)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(170, 35)
-        Me.TextBox3.TabIndex = 15
+        Me.staff_phone.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.staff_phone.Location = New System.Drawing.Point(242, 112)
+        Me.staff_phone.Margin = New System.Windows.Forms.Padding(2)
+        Me.staff_phone.Name = "staff_phone"
+        Me.staff_phone.Size = New System.Drawing.Size(115, 26)
+        Me.staff_phone.TabIndex = 15
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Label5.Location = New System.Drawing.Point(239, 143)
+        Me.Label5.Location = New System.Drawing.Point(238, 92)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(144, 28)
+        Me.Label5.Size = New System.Drawing.Size(100, 18)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Staff Phone"
         '
@@ -195,65 +208,73 @@ Partial Class Staff
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Label4.Location = New System.Drawing.Point(613, 143)
+        Me.Label4.Location = New System.Drawing.Point(488, 92)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(188, 28)
+        Me.Label4.Size = New System.Drawing.Size(128, 18)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Staff Password"
         '
-        'ComboBox1
+        'Combo_gender
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(436, 174)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(152, 36)
-        Me.ComboBox1.TabIndex = 12
+        Me.Combo_gender.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!)
+        Me.Combo_gender.FormattingEnabled = True
+        Me.Combo_gender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.Combo_gender.Location = New System.Drawing.Point(370, 112)
+        Me.Combo_gender.Margin = New System.Windows.Forms.Padding(2)
+        Me.Combo_gender.Name = "Combo_gender"
+        Me.Combo_gender.Size = New System.Drawing.Size(103, 26)
+        Me.Combo_gender.TabIndex = 12
         '
-        'TextBox2
+        'txt_password
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(618, 174)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(207, 35)
-        Me.TextBox2.TabIndex = 11
+        Me.txt_password.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_password.Location = New System.Drawing.Point(491, 112)
+        Me.txt_password.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.Size = New System.Drawing.Size(139, 26)
+        Me.txt_password.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Label3.Location = New System.Drawing.Point(431, 144)
+        Me.Label3.Location = New System.Drawing.Point(366, 93)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(159, 28)
+        Me.Label3.Size = New System.Drawing.Size(109, 18)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Staff Gender"
         '
-        'TextBox1
+        'txt_staffname
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(37, 175)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(189, 35)
-        Me.TextBox1.TabIndex = 9
+        Me.txt_staffname.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_staffname.Location = New System.Drawing.Point(104, 113)
+        Me.txt_staffname.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_staffname.Name = "txt_staffname"
+        Me.txt_staffname.Size = New System.Drawing.Size(127, 26)
+        Me.txt_staffname.TabIndex = 9
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Label2.Location = New System.Drawing.Point(32, 144)
+        Me.Label2.Location = New System.Drawing.Point(100, 93)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 28)
+        Me.Label2.Size = New System.Drawing.Size(95, 18)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Staff Name"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(398, 67)
+        Me.PictureBox1.Location = New System.Drawing.Point(265, 44)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(88, 58)
+        Me.PictureBox1.Size = New System.Drawing.Size(59, 38)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -263,9 +284,10 @@ Partial Class Staff
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label1.Location = New System.Drawing.Point(237, 22)
+        Me.Label1.Location = New System.Drawing.Point(158, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(404, 42)
+        Me.Label1.Size = New System.Drawing.Size(267, 28)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "SOUNDSLEEP HOTEL"
         '
@@ -273,9 +295,10 @@ Partial Class Staff
         '
         Me.Button7.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(12, 336)
+        Me.Button7.Location = New System.Drawing.Point(8, 218)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(126, 60)
+        Me.Button7.Size = New System.Drawing.Size(84, 39)
         Me.Button7.TabIndex = 32
         Me.Button7.Text = "Reservation"
         Me.Button7.UseVisualStyleBackColor = False
@@ -284,9 +307,10 @@ Partial Class Staff
         '
         Me.Button6.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(12, 273)
+        Me.Button6.Location = New System.Drawing.Point(8, 177)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(126, 57)
+        Me.Button6.Size = New System.Drawing.Size(84, 37)
         Me.Button6.TabIndex = 31
         Me.Button6.Text = "Room"
         Me.Button6.UseVisualStyleBackColor = False
@@ -295,9 +319,10 @@ Partial Class Staff
         '
         Me.Button5.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(12, 207)
+        Me.Button5.Location = New System.Drawing.Point(8, 135)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(126, 60)
+        Me.Button5.Size = New System.Drawing.Size(84, 39)
         Me.Button5.TabIndex = 30
         Me.Button5.Text = "Clients"
         Me.Button5.UseVisualStyleBackColor = False
@@ -307,24 +332,51 @@ Partial Class Staff
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(20, 110)
+        Me.Label8.Location = New System.Drawing.Point(13, 72)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 32)
+        Me.Label8.Size = New System.Drawing.Size(58, 22)
         Me.Label8.TabIndex = 29
         Me.Label8.Text = "Staff "
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "staff_id"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "staff_name"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "staff_phone"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "staff_gender"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "staff_password"
+        Me.Column5.Name = "Column5"
+        '
         'Staff
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(1104, 633)
+        Me.ClientSize = New System.Drawing.Size(920, 533)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Staff"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Staff"
@@ -340,21 +392,20 @@ Partial Class Staff
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_reset As Button
+    Friend WithEvents btn_delete As Button
+    Friend WithEvents btn_edit As Button
+    Friend WithEvents btn_add As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_search As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents staff_phone As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Combo_gender As ComboBox
+    Friend WithEvents txt_password As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_staffname As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
@@ -362,4 +413,10 @@ Partial Class Staff
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class
