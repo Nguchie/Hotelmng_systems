@@ -148,6 +148,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Room.resx">
       <DependentUpon>Room.vb</DependentUpon>
+<<<<<<< HEAD
+      <SubType>Designer</SubType>
+=======
+>>>>>>> 890fb844f6067e30ee76c24369f4f2d811b52433
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

@@ -11,7 +11,7 @@ Public Class Room
     Private Sub LoadRooms()
         Try
             connection.Open()
-            Dim query As String = "SELECT room_id, room_phone, room_status FROM rooms"
+            Dim query As String = "SELECT room_id, room_number, room_phone, room_status FROM rooms"
             Dim adapter As New MySqlDataAdapter(query, connection)
             Dim roomTable As New DataTable()
             adapter.Fill(roomTable)
@@ -24,15 +24,18 @@ Public Class Room
     End Sub
 
     Private Sub rm_add_Click(sender As Object, e As EventArgs) Handles rm_add.Click
+        Dim roomNumber As String = Combo_number.Text
         Dim roomPhone As String = rm_phone.Text
         Dim roomStatus As String = Combo_rmstatus.Text
 
         Try
             connection.Open()
-            Dim query As String = "INSERT INTO rooms (room_phone, room_status) VALUES (@room_phone, @room_status)"
+            Dim query As String = "INSERT INTO rooms (room_number, room_phone, room_status) VALUES (@room_number, @room_phone, @room_status)"
             Dim cmd As New MySqlCommand(query, connection)
+            cmd.Parameters.AddWithValue("@room_number", roomNumber)
             cmd.Parameters.AddWithValue("@room_phone", roomPhone)
             cmd.Parameters.AddWithValue("@room_status", roomStatus)
+
             cmd.ExecuteNonQuery()
             MessageBox.Show("Room added successfully.")
             LoadRooms() ' Refresh DataGridView after adding a room
@@ -51,13 +54,15 @@ Public Class Room
         End If
 
         Dim roomId As Integer = Convert.ToInt32(selectedRow.Cells("room_id").Value)
+        Dim roomNumber As String = Combo_number.Text
         Dim roomPhone As String = rm_phone.Text
         Dim roomStatus As String = Combo_rmstatus.Text
 
         Try
             connection.Open()
-            Dim query As String = "UPDATE rooms SET room_phone = @room_phone, room_status = @room_status WHERE room_id = @room_id"
+            Dim query As String = "UPDATE rooms SET room_number = @room_number, room_phone = @room_phone, room_status = @room_status WHERE room_id = @room_id"
             Dim cmd As New MySqlCommand(query, connection)
+            cmd.Parameters.AddWithValue("@room_number", roomNumber)
             cmd.Parameters.AddWithValue("@room_phone", roomPhone)
             cmd.Parameters.AddWithValue("@room_status", roomStatus)
             cmd.Parameters.AddWithValue("@room_id", roomId)
