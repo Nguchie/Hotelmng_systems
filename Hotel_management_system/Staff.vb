@@ -14,7 +14,11 @@ Public Class Staff
     Private Sub LoadStaff()
         Try
             connection.Open()
+<<<<<<< HEAD
             Dim query As String = "SELECT staff_id,staff_name, staff_phone, staff_gender, staff_password FROM staff"
+=======
+            Dim query As String = "SELECT staff_id, staff_phone, staff_gender, staff_password FROM staff"
+>>>>>>> 890fb844f6067e30ee76c24369f4f2d811b52433
             Dim adapter As New MySqlDataAdapter(query, connection)
             Dim staffTable As New DataTable()
             adapter.Fill(staffTable)

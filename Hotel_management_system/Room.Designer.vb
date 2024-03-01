@@ -25,6 +25,12 @@ Partial Class Room
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Room))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+<<<<<<< HEAD
+=======
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> 890fb844f6067e30ee76c24369f4f2d811b52433
         Me.rm_reset = New System.Windows.Forms.Button()
         Me.rm_delete = New System.Windows.Forms.Button()
         Me.rm_edit = New System.Windows.Forms.Button()
@@ -81,6 +87,7 @@ Partial Class Room
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column2, Me.Column3})
         Me.DataGridView1.Location = New System.Drawing.Point(77, 322)
         Me.DataGridView1.Name = "DataGridView1"
@@ -131,6 +138,73 @@ Partial Class Room
         '
         'rm_add
         '
+=======
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        Me.DataGridView1.Location = New System.Drawing.Point(40, 310)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(345, 184)
+        Me.DataGridView1.TabIndex = 24
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "room_id"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "room_phone"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "room status"
+        Me.Column3.Name = "Column3"
+        '
+        'rm_reset
+        '
+        Me.rm_reset.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.rm_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rm_reset.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rm_reset.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.rm_reset.Location = New System.Drawing.Point(308, 190)
+        Me.rm_reset.Margin = New System.Windows.Forms.Padding(2)
+        Me.rm_reset.Name = "rm_reset"
+        Me.rm_reset.Size = New System.Drawing.Size(77, 61)
+        Me.rm_reset.TabIndex = 23
+        Me.rm_reset.Text = "Reset"
+        Me.rm_reset.UseVisualStyleBackColor = False
+        '
+        'rm_delete
+        '
+        Me.rm_delete.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.rm_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rm_delete.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rm_delete.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.rm_delete.Location = New System.Drawing.Point(224, 189)
+        Me.rm_delete.Margin = New System.Windows.Forms.Padding(2)
+        Me.rm_delete.Name = "rm_delete"
+        Me.rm_delete.Size = New System.Drawing.Size(81, 61)
+        Me.rm_delete.TabIndex = 22
+        Me.rm_delete.Text = "Delete"
+        Me.rm_delete.UseVisualStyleBackColor = False
+        '
+        'rm_edit
+        '
+        Me.rm_edit.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.rm_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rm_edit.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rm_edit.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.rm_edit.Location = New System.Drawing.Point(131, 189)
+        Me.rm_edit.Margin = New System.Windows.Forms.Padding(2)
+        Me.rm_edit.Name = "rm_edit"
+        Me.rm_edit.Size = New System.Drawing.Size(85, 61)
+        Me.rm_edit.TabIndex = 21
+        Me.rm_edit.Text = "Edit"
+        Me.rm_edit.UseVisualStyleBackColor = False
+        '
+        'rm_add
+        '
+>>>>>>> 890fb844f6067e30ee76c24369f4f2d811b52433
         Me.rm_add.BackColor = System.Drawing.SystemColors.HotTrack
         Me.rm_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rm_add.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -365,10 +439,14 @@ Partial Class Room
     Friend WithEvents Button5 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents DataGridView1 As DataGridView
+<<<<<<< HEAD
     Friend WithEvents Label2 As Label
     Friend WithEvents Combo_number As ComboBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+=======
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+>>>>>>> 890fb844f6067e30ee76c24369f4f2d811b52433
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
 End Class
