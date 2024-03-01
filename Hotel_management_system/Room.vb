@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Room
-    Dim connectionString As String = "server=localhost;port=3306;database=hotel_management;uid=root;password=;"
+    Dim connectionString As String = "server=localhost;port=3306;database=hotel management;uid=root;password=;"
     Dim connection As New MySqlConnection(connectionString)
 
     Private Sub Room_Load(sender As Object, e As EventArgs) Handles MyBase.Load
